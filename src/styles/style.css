@@ -1,12 +1,15 @@
 
+@import './theme/theme';
 @import './root';
 @import './components/idle';
 @import './components/clock';
 @import './components/greeting';
+@import './components/application';
+@import './components/feed';
 
 svg {
     & * {
-        stroke: var(--color-dark);
+        stroke: var(--md-sys-color-on-primary);;
         stroke-linejoin: bevel;
         stroke-width: 2px;
         fill: none;
@@ -14,7 +17,7 @@ svg {
 }
 
 button {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -22,12 +25,12 @@ button {
 
     padding: 10px 24px 10px 16px;
 
-    background-color: var(--color-primary);
+    background-color: var(--md-sys-color-primary);
 
     border-radius: 100px;
     border: none;
 
-    color: var(--color-dark);
+    color: var(--md-sys-color-on-primary);
 
     font-family: 'IBM Plex Mono';
     font-weight: 700;
@@ -37,7 +40,8 @@ button {
 
     cursor: pointer;
 
-    & svg {
+    & svg,
+    & img {
         display: block;
 
         width: 18px;
@@ -45,7 +49,7 @@ button {
     }
 
     &:hover {
-        background-color: var(--color-primary-dark);
+        background-color: var(--md-sys-color-secondary-container);
         transition: background-color 175ms, color 175ms;
 
         color: white;
@@ -58,3 +62,20 @@ button {
     }
 }
 
+mt-dashboard {
+    padding: 40px;
+    display: grid;
+    grid-template:
+        'topbar topbar topbar topbarLast'
+        'application test feed feed'
+        'application test feed feed'
+        'application test feed feed'
+        'application test feed feed'
+        'application test feed feed';
+    gap: 20px;
+
+    & button {
+        grid-area: topbarLast;
+        justify-self: end;
+    }
+}

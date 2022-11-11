@@ -13,4 +13,6 @@ mt-idle {
     background: url('/images/background1.avif');
     background-size: cover;
     background-position: center 10%;
+
+    position: fixed;
 }
