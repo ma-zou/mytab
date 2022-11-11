@@ -18,8 +18,9 @@
 	],
 	"applications": [
 		{
-			"type":"repeater",
-			"filds": [
+			"type": "repeater",
+			"name": "Applications",
+			"fields": [
 				{
 					"type": "text",
 					"name": "name",
