@@ -5,10 +5,11 @@ export type User = {
 export type Application = {
     name    : string
     url     : URL
+	icon 	: URL
 }
 
 export type MyTabSettings = {
-    backgroundId    : number
+	idle: Record<string, number>
     user            : User
     applications?   : Array<Application>
 }
@@ -30,7 +31,29 @@ export class Settings
 				},
 				user: {
 					name: 'Annonymus',
-				}
+				},
+				applications: [
+					{
+						name: 'Drive',
+						url: new URL( 'https://drive.google.com/drive/' ),
+						icon: new URL( 'https://lh3.googleusercontent.com/rCwHBRBJV4wFiEIN_Mlboj94_TGJxyJtBh-MBFL4y1aZdO4hb7_Uc_PpXRyAoN7O9m_Zc1wSyp3H1vsnb829QE7t9KyGNJY9A1a3QQ' )
+					},
+					{
+						name: 'Gmail',
+						url: new URL( 'https://mail.google.com/mail/u/0/#inbox' ),
+						icon: new URL( 'https://lh3.googleusercontent.com/0rpHlrX8IG77awQMuUZpQ0zGWT7HRYtpncsuRnFo6V3c8Lh2hPjXnEuhDDd-OsLz1vua4ld2rlUYFAaBYk-rZCODmi2eJlwUEVsZgg' )
+					},
+					{
+						name: 'Calendar',
+						url: new URL( 'https://calendar.google.com/' ),
+						icon: new URL( 'https://lh3.googleusercontent.com/K0vgpnn9Vour8ByU3htR3ou5Cx70Me-lW_51VEAIS5dfzXCQ0otXakVuPiQVc0V6qcf9aP_vkVul59airN27m3mttf4zQ1TPv4MVrw' )
+					},
+					{
+						name: 'Keep',
+						url: new URL( 'https://keep.google.com/#home' ),
+						icon: new URL( 'https://lh3.googleusercontent.com/V6C9KmBzAK48_si_jPMSgUrBhdCGL8-z8QMg-WvDqSdVdPXN-FZHrpCHaZaYAYuXCGK-G85sYRIy3PdqfXAS4QlXwQJTyNUPYCpz' )
+					}
+				]
 			}
 		}
 		else 
