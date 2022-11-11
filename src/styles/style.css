@@ -1,0 +1,60 @@
+
+@import './root';
+@import './components/idle';
+@import './components/clock';
+@import './components/greeting';
+
+svg {
+    & * {
+        stroke: var(--color-dark);
+        stroke-linejoin: bevel;
+        stroke-width: 2px;
+        fill: none;
+    }
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 24px 10px 16px;
+
+    background-color: var(--color-primary);
+
+    border-radius: 100px;
+    border: none;
+
+    color: var(--color-dark);
+
+    font-family: 'IBM Plex Mono';
+    font-weight: 700;
+    font-size: 14px;
+
+    letter-spacing: .1px;
+
+    cursor: pointer;
+
+    & svg {
+        display: block;
+
+        width: 18px;
+        height: 18px;
+    }
+
+    &:hover {
+        background-color: var(--color-primary-dark);
+        transition: background-color 175ms, color 175ms;
+
+        color: white;
+
+        & svg * {
+            stroke: white;
+
+            transition: stroke 175ms;
+        }
+    }
+}
+

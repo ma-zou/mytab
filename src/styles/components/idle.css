@@ -1,0 +1,16 @@
+mt-idle {
+    --background-image: url('/images/background1.avif');
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+
+    /* background: var(--background-image); */
+    background: url('/images/background1.avif');
+    background-size: cover;
+    background-position: center 10%;
+}

@@ -1,0 +1,37 @@
+{
+	"user": [
+		{
+			"type": "text",
+			"name": "name",
+			"label": "Name"
+		}
+	],
+	"background": [
+		{
+			"type": "select",
+			"name": "backgroundId",
+			"label": "Background",
+			"options": [
+				"1"
+			]
+		}
+	],
+	"applications": [
+		{
+			"type":"repeater",
+			"filds": [
+				{
+					"type": "text",
+					"name": "name",
+					"label": "Application Name"
+				},
+				{
+					"type": "text",
+					"name": "url",
+					"label": "Application Url"
+				}
+			]
+		}
+	]
+    
+}
