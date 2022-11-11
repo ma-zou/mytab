@@ -26,7 +26,7 @@ export default class Dashboard extends HTMLElement
   <polyline points="19 3 19 5 13 5 13 7" />
 </svg> Settings`
 
-		this.settingsButton.addEventListener( 'click', this.toggleSettingsView.bind( this ) )
+		// this.settingsButton.addEventListener( 'click', this.toggleSettingsView.bind( this ) )
 
 		this.root.appendChild( this.settingsButton )
 
