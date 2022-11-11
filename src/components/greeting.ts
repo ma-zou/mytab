@@ -24,10 +24,6 @@ export default class Greeting extends HTMLHeadingElement
 
 		this.root.className = 'greeting'
 		this.root.innerText = this.greetingMessage( this.currentHour )
-		this.root.addEventListener( 'click', () => 
-		{
-			Settings.set( 'user.name', 'Malte' ) 
-		} )
 	}
 
 	public greetingMessage( hour : number ) 

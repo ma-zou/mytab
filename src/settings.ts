@@ -25,7 +25,9 @@ export class Settings
 		if ( !settingsString ) 
 		{
 			settings = {
-				backgroundId: 1,
+				idle: {
+					backgroundId: 1,
+				},
 				user: {
 					name: 'Annonymus',
 				}

@@ -17,7 +17,7 @@ export default class Idle extends HTMLElement
 		this.root.appendChild( new Clock() )
 		this.root.appendChild( new Greeting() )
 
-		this.root.style.setProperty( '--background-image-id', `url(/images/background${Settings.get( 'backgroundId' )}.avif)` )
+		this.root.style.setProperty( '--background-image-id', `url(/images/background${Settings.get( 'idle.backgroundId' )}.avif)` )
 	}
 }
 
