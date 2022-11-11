@@ -1,6 +1,7 @@
 import SettingsView from './settings/settingsView'
 import { Settings } from '../settings'
 import ApplicationList from './applications/applicationList'
+import FeedList from './feed/feedList'
 
 export default class Dashboard extends HTMLElement 
 {
@@ -36,6 +37,8 @@ export default class Dashboard extends HTMLElement
 
 			this.root.appendChild( applicationList )
 		}
+
+		this.root.appendChild( new FeedList() )
 	}
 
 	toggleSettingsView() 
@@ -54,4 +57,4 @@ export default class Dashboard extends HTMLElement
 	}
 }
 
-customElements.define( 'mt-datshboard', Dashboard )
+customElements.define( 'mt-dashboard', Dashboard )
