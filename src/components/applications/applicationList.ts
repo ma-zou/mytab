@@ -11,14 +11,15 @@ export default class ApplicationList extends HTMLUListElement
 		super()
 
 		this.root = this.getRootNode() as HTMLUListElement
+		this.root.className = 'mytab__applicationList'
 		this.applications = applications
 
-		console.log( applications )
 
 		this.applications.forEach( ( applicationData: ApplicationType ) => 
 		{
 			const listItem = document.createElement( 'li' )
 			listItem.appendChild( new Application( applicationData ) )
+			this.root.appendChild( listItem )
 		} )
 
 	}
